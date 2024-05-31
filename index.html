@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Game Basic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .gamebox-container {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .gamebox-item {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .plan-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .gamebox-item-title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .gamebox-item-describ {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .gamebox-item-describ li {
+      margin-bottom: 20px;
+    }
+
+    .btn-play {
+      padding: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+    }
+
+    footer {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    @media (max-width: 1250px) {
+      .gamebox-container {
+        margin-top: 5%;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gamebox-container">
+    <div class="gamebox-item">
+      <div class="gamebox-item-title">Game Dicee</div>
+      <ul class="gamebox-item-describ">
+        <li>2 Player</li>
+        <li>HTML5,CSS3</li>
+        <li>Responsive</li>
+        <li><a href="mailto:az@gmail.com">Phone &amp; Email Support</a></li>
+      </ul>
+      <a class="btn-play" href="game-dicee/index.html">Play</a>
+    </div>
+    <div class="gamebox-item">
+      <div class="gamebox-item-title">Game Simon</div>
+      <ul class="gamebox-item-describ">
+        <li>1 Player</li>
+        <li>HTML5,CSS3,Jquery</li>
+        <li>Responsive</li>
+        <li><a href="mailto:az@gmail.com">Phone &amp; Email Support</a></li>
+      </ul>
+      <a class="btn-play" href="game-simon/index.html">Play</a>
+    </div>
+    <div class="gamebox-item">
+      <div class="gamebox-item-title">Game Drum</div>
+      <ul class="gamebox-item-describ">
+        <li>1 Player</li>
+        <li>HTML5,CSS3</li>
+        <li>Responsive</li>
+        <li><a href="mailto:az@gmail.com">Phone &amp; Email Support</a></li>
+      </ul>
+      <a class="btn-play" href="game-drumkit/index.html">Play</a>
+    </div>
+  </div>
+
+  <footer>
+    Made by Domino 2024.
+  </footer>
+</body>
+
+</html>

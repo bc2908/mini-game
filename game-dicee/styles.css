@@ -1,0 +1,141 @@
+body {
+  background-color: #393e46;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 30px;
+  font-family: "Lobster", cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ecca3;
+}
+
+.dice {
+  display: inline-block;
+  width: 40%;
+  height: 400px;
+  position: relative;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ecca3;
+  font-family: "Indie Flower", cursive;
+}
+
+.box-bg,
+.box-img {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  width: 204.8px;
+  height: 204.8px;
+  transform: translateX(-50%);
+}
+
+.bg-img {
+  width: inherit;
+  height: inherit;
+  background-image: url(./images/dice1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+img {
+  width: 100%;
+}
+
+.img1.hide {
+  display: none;
+}
+
+.img2.hide {
+  display: none;
+}
+
+footer {
+  margin-top: 2%;
+  color: #eeeeee;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+}
+
+.animation {
+  animation: diceeRotate 2s linear;
+}
+
+@keyframes diceeRotate {
+  0% {
+    transform: rotate(0deg);
+    background-image: url(./images/dice2.png);
+  }
+  10% {
+    transform: rotate(36deg);
+    background-image: url(./images/dice3.png);
+  }
+  20% {
+    transform: rotate(72deg);
+    background-image: url(./images/dice4.png);
+  }
+  30% {
+    transform: rotate(98deg);
+    background-image: url(./images/dice5.png);
+  }
+  40% {
+    transform: rotate(134deg);
+    background-image: url(./images/dice6.png);
+  }
+  50% {
+    transform: rotate(170deg);
+    background-image: url(./images/dice1.png);
+  }
+  60% {
+    transform: rotate(206deg);
+    background-image: url(./images/dice2.png);
+  }
+  70% {
+    transform: rotate(242deg);
+    background-image: url(./images/dice3.png);
+  }
+  80% {
+    transform: rotate(278deg);
+    background-image: url(./images/dice4.png);
+  }
+  90% {
+    transform: rotate(314deg);
+    background-image: url(./images/dice5.png);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-image: url(./images/dice6.png);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .dice {
+    height: 280px;
+  }
+
+  .box-bg,
+  .box-img {
+    width: 100px;
+    height: 100px;
+  }
+}

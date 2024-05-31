@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #faf8f1;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  line-height: 4.6rem;
+  color: #343a40;
+  text-align: center;
+  margin: 3%;
+}
+
+.tut {
+  font-family: "Lobster", sans-serif;
+  text-align: justify;
+  line-height: 1.4rem;
+  font-size: 1rem;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  /* Solu 1 */
+  float: left;
+  width: calc(100% / 2);
+
+  /* Solu 2 */
+  /* width: calc(92%/2);
+  display: inline-block; */
+}
+
+.btn {
+  margin: 25px auto;
+  height: 200px;
+  width: 92%;
+  max-width: 200px;
+  border: 10px solid #343a40;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: #ff8787;
+  opacity: 0.8;
+}
+
+.btn-1 {
+  background-color: #fce38a;
+}
+
+.btn-2 {
+  background-color: #f38181;
+}
+
+.btn-3 {
+  background-color: #95e1d3;
+}
+
+.btn-4 {
+  background-color: #eaffd0;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+footer {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  line-height: 1.4rem;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.btn-new-game {
+  display: none;
+  border: none;
+  border-radius: 3%;
+  text-align: center;
+  appearance: none;
+  /*fix input style for safari*/
+  -webkit-appearance: none;
+
+  margin: 15px auto 15px auto;
+  padding: 11px 16px;
+
+  font-size: 1.6rem;
+  font-family: "Press Start 2P", cursive;
+
+  background-color: #343a40;
+  color: #fff;
+}
+
+.btn-new-game:hover {
+  background-color: #6c757d;
+}
+
+.btn-new-game.show {
+  display: block;
+}
+
+@media screen and (max-width: 739px) {
+  .btn {
+    height: 100px;
+    max-width: 100px;
+  }
+}
