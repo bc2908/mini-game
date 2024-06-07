@@ -13,7 +13,7 @@ function draw(numPlayer) {
     var bg_image1 = document.querySelectorAll(".bg-img")[0];
 
     bg_image1.classList.add("animation"); //start animation rotate
-    image1.classList.add("hide");
+    image1.classList.add("hide"); //hide dice
 
     setTimeout(function () {
       var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
@@ -22,12 +22,11 @@ function draw(numPlayer) {
 
       image1.setAttribute("src", randomImageSource);
 
-      turnPlayer1 = true; //Player1 done
       rotating1 = false; //Set default value
-      diceePlayer1 = randomNumber1; //Set result
+      diceePlayer1 = randomNumber1; //Set result for player 1
 
-      image1.classList.remove("hide");
-      bg_image1.classList.remove("animation");
+      image1.classList.remove("hide"); //show dice
+      bg_image1.classList.remove("animation"); //end animation rotate
 
       checkResult();
     }, 2000);
@@ -46,9 +45,8 @@ function draw(numPlayer) {
 
       image2.setAttribute("src", randomImageSource);
 
-      turnPlayer2 = true;
-      rotating2 = false;
-      diceePlayer2 = randomNumber2;
+      rotating2 = false; //Set default value
+      diceePlayer2 = randomNumber2; //Set result for player 1
 
       image2.classList.remove("hide");
       bg_image2.classList.remove("animation");
@@ -77,12 +75,9 @@ document.querySelector(".img1").onclick = function (e) {
   if (turnPlayer1 === true || rotating2 === true) {
     e.stopPropagation();
   } else {
-    if (turnPlayer2 === false) {
-      rotating1 = true; //Set status rotate: rotating
-      draw(1);
-    } else {
-      draw(1);
-    }
+    turnPlayer1 = true; //Player1 done
+    rotating1 = true; //Set status rotate of player 1: rotating
+    draw(1);
   }
 };
 
@@ -91,12 +86,9 @@ document.querySelector(".img2").onclick = function (e) {
   if (turnPlayer2 === true || rotating1 === true) {
     e.stopPropagation();
   } else {
-    if (turnPlayer1 === false) {
-      rotating2 = true;
-      draw(2);
-    } else {
-      draw(2);
-    }
+    turnPlayer2 = true; //Player2 done
+    rotating2 = true; //Set status rotate of player 2: rotating
+    draw(2);
   }
 };
 
