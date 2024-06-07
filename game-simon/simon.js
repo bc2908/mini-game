@@ -1,7 +1,7 @@
 var numButtons = ["one", "two", "three", "four"];
 
-var gamePattern = [];
-var userClickedPattern = [];
+var gamePattern = []; 
+var userClickedPattern = []; 
 
 var started = false;
 var level = 0;
@@ -78,6 +78,7 @@ $(document).ready(function () {
 //Logic game
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    //check the number of times - the player remembers - remember enough to pass
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function () {
         nextSequence(); //increase level
